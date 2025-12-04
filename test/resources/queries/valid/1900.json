@@ -1,0 +1,40 @@
+{
+	"title": "1900",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"IS": {
+						"sections_dept": "cpsc"
+					}
+				},
+				{
+					"EQ": {
+						"sections_avg": 67.91
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_year",
+				"sections_avg",
+				"sections_id"
+			],
+			"ORDER": "sections_avg"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_year": 2012,
+			"sections_avg": 67.91,
+			"sections_id": "261"
+		},
+		{
+			"sections_year": 1900,
+			"sections_avg": 67.91,
+			"sections_id": "261"
+		}
+	]
+}

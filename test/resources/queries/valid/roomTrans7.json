@@ -1,0 +1,31 @@
+{
+	"title": "transform7",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname",
+				"maxSeats1",
+				"maxSeats2"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_shortname"
+			],
+			"APPLY": [
+				{
+					"maxSeats1": {
+						"MAX": "rooms_seats"
+					}
+				},
+				{
+					"maxSeats2": {
+						"MAX": "rooms_seats"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [{"rooms_shortname":"ALRD","maxSeats1":94,"maxSeats2":94},{"rooms_shortname":"ANSO","maxSeats1":90,"maxSeats2":90},{"rooms_shortname":"AERL","maxSeats1":144,"maxSeats2":144},{"rooms_shortname":"AUDX","maxSeats1":21,"maxSeats2":21},{"rooms_shortname":"BIOL","maxSeats1":228,"maxSeats2":228},{"rooms_shortname":"BRKX","maxSeats1":70,"maxSeats2":70},{"rooms_shortname":"BUCH","maxSeats1":275,"maxSeats2":275},{"rooms_shortname":"CIRS","maxSeats1":426,"maxSeats2":426},{"rooms_shortname":"CHBE","maxSeats1":200,"maxSeats2":200},{"rooms_shortname":"CHEM","maxSeats1":265,"maxSeats2":265},{"rooms_shortname":"CEME","maxSeats1":100,"maxSeats2":100},{"rooms_shortname":"EOSM","maxSeats1":50,"maxSeats2":50},{"rooms_shortname":"ESB","maxSeats1":350,"maxSeats2":350},{"rooms_shortname":"FNH","maxSeats1":99,"maxSeats2":99},{"rooms_shortname":"FSC","maxSeats1":250,"maxSeats2":250},{"rooms_shortname":"FORW","maxSeats1":63,"maxSeats2":63},{"rooms_shortname":"LASR","maxSeats1":94,"maxSeats2":94},{"rooms_shortname":"FRDM","maxSeats1":160,"maxSeats2":160},{"rooms_shortname":"GEOG","maxSeats1":225,"maxSeats2":225},{"rooms_shortname":"HEBB","maxSeats1":375,"maxSeats2":375},{"rooms_shortname":"HENN","maxSeats1":257,"maxSeats2":257},{"rooms_shortname":"ANGU","maxSeats1":260,"maxSeats2":260},{"rooms_shortname":"DMP","maxSeats1":160,"maxSeats2":160},{"rooms_shortname":"IONA","maxSeats1":100,"maxSeats2":100},{"rooms_shortname":"IBLC","maxSeats1":154,"maxSeats2":154},{"rooms_shortname":"SOWK","maxSeats1":68,"maxSeats2":68},{"rooms_shortname":"LSK","maxSeats1":205,"maxSeats2":205},{"rooms_shortname":"LSC","maxSeats1":350,"maxSeats2":350},{"rooms_shortname":"MCLD","maxSeats1":136,"maxSeats2":136},{"rooms_shortname":"MCML","maxSeats1":200,"maxSeats2":200},{"rooms_shortname":"MATH","maxSeats1":224,"maxSeats2":224},{"rooms_shortname":"MATX","maxSeats1":106,"maxSeats2":106},{"rooms_shortname":"SCRF","maxSeats1":280,"maxSeats2":280},{"rooms_shortname":"ORCH","maxSeats1":72,"maxSeats2":72},{"rooms_shortname":"PHRM","maxSeats1":236,"maxSeats2":236},{"rooms_shortname":"PCOH","maxSeats1":40,"maxSeats2":40},{"rooms_shortname":"OSBO","maxSeats1":442,"maxSeats2":442},{"rooms_shortname":"SPPH","maxSeats1":66,"maxSeats2":66},{"rooms_shortname":"SRC","maxSeats1":299,"maxSeats2":299},{"rooms_shortname":"UCLL","maxSeats1":55,"maxSeats2":55},{"rooms_shortname":"MGYM","maxSeats1":40,"maxSeats2":40},{"rooms_shortname":"WESB","maxSeats1":325,"maxSeats2":325},{"rooms_shortname":"SWNG","maxSeats1":190,"maxSeats2":190},{"rooms_shortname":"WOOD","maxSeats1":503,"maxSeats2":503}]}

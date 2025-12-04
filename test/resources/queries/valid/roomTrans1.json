@@ -1,0 +1,37 @@
+{
+	"title": "transform1",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_furniture",
+				"maxSeats",
+				"minLon"
+			],
+			"ORDER": {
+				"dir": "UP",
+				"keys": [
+					"rooms_furniture"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_furniture"
+			],
+			"APPLY": [
+				{
+					"maxSeats": {
+						"MAX": "rooms_seats"
+					}
+				},
+				{
+					"minLon": {
+						"MIN": "rooms_lon"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected": [{"rooms_furniture":"Classroom-Fixed Tables/Fixed Chairs","maxSeats":375,"minLon":-123.25583},{"rooms_furniture":"Classroom-Fixed Tables/Movable Chairs","maxSeats":350,"minLon":-123.25692},{"rooms_furniture":"Classroom-Fixed Tables/Moveable Chairs","maxSeats":78,"minLon":-123.25468},{"rooms_furniture":"Classroom-Fixed Tablets","maxSeats":503,"minLon":-123.25623},{"rooms_furniture":"Classroom-Hybrid Furniture","maxSeats":150,"minLon":-123.25224},{"rooms_furniture":"Classroom-Learn Lab","maxSeats":72,"minLon":-123.25692},{"rooms_furniture":"Classroom-Movable Tables & Chairs","maxSeats":442,"minLon":-123.25741},{"rooms_furniture":"Classroom-Movable Tablets","maxSeats":68,"minLon":-123.2559},{"rooms_furniture":"Classroom-Moveable Tables & Chairs","maxSeats":40,"minLon":-123.25741},{"rooms_furniture":"Classroom-Moveable Tablets","maxSeats":90,"minLon":-123.25741}]}

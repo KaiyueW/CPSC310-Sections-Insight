@@ -1,0 +1,20 @@
+{
+	"title": "invalid transform8",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_address",
+				"count"
+			],
+			"ORDER": {
+				"dir": "DOWN",
+				"keys": [
+					"count"
+				]
+			}
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

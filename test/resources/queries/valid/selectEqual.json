@@ -1,0 +1,36 @@
+{
+	"title": "SELECT dept, fail WHERE fail = 97",
+	"input": {
+		"WHERE": {
+			"EQ": {
+				"sections_fail": 97
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_dept",
+				"sections_avg",
+				"sections_fail"
+			],
+			"ORDER": "sections_fail"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_dept": "math",
+			"sections_avg": 61.03,
+			"sections_fail": 97
+		},
+		{
+			"sections_dept": "chem",
+			"sections_avg": 68.87,
+			"sections_fail": 97
+		},
+		{
+			"sections_dept": "chem",
+			"sections_avg": 72.66,
+			"sections_fail": 97
+		}
+	]
+}

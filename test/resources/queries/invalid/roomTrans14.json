@@ -1,0 +1,26 @@
+{
+	"title": "invalid transform14",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_furniture",
+				"maxSeats",
+				"minLon"
+			],
+			"ORDER": {
+				"dir": "UP",
+				"keys": [
+					"rooms_furniture"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_furniture"
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

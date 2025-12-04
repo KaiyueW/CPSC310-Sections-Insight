@@ -1,0 +1,30 @@
+{
+	"WHERE": {
+		"IS": {
+			"sections_dept": "cpsc"
+		}
+	},
+	"OPTIONS": {
+		"COLUMNS": [
+			"countfail",
+			"countpass"
+		]
+	},
+	"TRANSFORMATIONS": {
+		"GROUP": [
+			"sections_dept"
+		],
+		"APPLY": [
+			{
+				"countfail": {
+					"COUNT": "sections_fail"
+				}
+			},
+			{
+				"countpass": {
+					"COUNT": "sections_pass"
+				}
+			}
+		]
+	}
+}

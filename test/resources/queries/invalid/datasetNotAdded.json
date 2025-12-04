@@ -1,0 +1,19 @@
+{
+	"title": "SELECT dept, avg WHERE avg > 98",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"ubc_avg": 98
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"ubc_dept",
+				"ubc_avg"
+			],
+			"ORDER": "ubc_avg"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

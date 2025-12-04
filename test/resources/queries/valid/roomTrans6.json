@@ -1,0 +1,23 @@
+{
+	"title": "transform6",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"rooms_type": "Ca*"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_shortname"
+			],
+			"ORDER": "rooms_shortname"
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_shortname"
+			],
+			"APPLY": []
+		}
+	},
+	"errorExpected": false,
+	"expected": [{"rooms_shortname":"ALRD"},{"rooms_shortname":"ANGU"},{"rooms_shortname":"BUCH"},{"rooms_shortname":"CEME"},{"rooms_shortname":"FSC"},{"rooms_shortname":"IBLC"},{"rooms_shortname":"IONA"},{"rooms_shortname":"MCML"}]}

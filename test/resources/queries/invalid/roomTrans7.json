@@ -1,0 +1,24 @@
+{
+	"title": "invalid transform7",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"rooms_type": "Ca*"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_aaa"
+			],
+			"ORDER": "rooms_aaa"
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_aaa"
+			],
+			"APPLY": []
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

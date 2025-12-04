@@ -1,0 +1,42 @@
+{
+	"title": "invalid transform9",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_fullname",
+				"rooms_number",
+				"rooms_address"
+			],
+			"ORDER": {
+				"dir": "UP",
+				"keys": [
+					"AVGSeats",
+					"rooms_fullname"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_fullname",
+				"rooms_number",
+				"rooms_address",
+				"rooms_type"
+			],
+			"APPLY": [
+				{
+					"AVGSeats": {
+						"AVG": "rooms_seats"
+					}
+				},
+				{
+					"SUMLat": {
+						"SUM": "rooms_lat"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

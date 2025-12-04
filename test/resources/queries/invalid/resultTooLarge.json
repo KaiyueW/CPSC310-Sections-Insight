@@ -1,0 +1,19 @@
+{
+	"title": "throw error",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"sections_avg": 30
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_dept",
+				"sections_avg"
+			],
+			"ORDER": "sections_dept"
+		}
+	},
+	"errorExpected": true,
+	"expected": "ResultTooLargeError"
+}
